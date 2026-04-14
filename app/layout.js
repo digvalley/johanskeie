@@ -1,6 +1,7 @@
 import { Geist } from "next/font/google";
 import { cookies } from "next/headers";
 import "./globals.css";
+import SiteNav from "./site-nav";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -34,6 +35,7 @@ export default async function RootLayout({ children }) {
       data-theme={theme}
     >
       <body className="min-h-full flex flex-col">
+        <SiteNav />
         {children}
       </body>
     </html>

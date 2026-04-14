@@ -1,112 +1,182 @@
-import Image from "next/image";
-import Link from "next/link";
+import Link from 'next/link'
 
-export const dynamic = "force-static";
+export const dynamic = 'force-static'
 
 export const metadata = {
-  title: "Om oss | Johan Skeie",
+  title: 'Om oss | Johan Skeie',
   description:
-    "Om Johan Skeie: historie, dagens drift, adresse og kontaktinformasjon.",
-};
+    'Historien om Johan Skeie – et lokalt entreprenørfirma i Kvam med over 20 års erfaring innen graving, grusing og transport.',
+}
 
 export default function WhoAreWePage() {
   return (
-    <main className="landing flex flex-1 flex-col">
-      <header className="hero-wrap colored-header px-6 pt-10 pb-12 sm:px-10 sm:pt-12 sm:pb-14">
-        <div className="mx-auto w-full max-w-6xl">
-          <div className="site-header-row">
-            <Link href="/" className="site-brand" aria-label="Johan Skeie">
-              <Image
-                src="/logo.png"
-                alt="Johan Skeie logo"
-                width={100}
-                height={100}
-                priority
-              />
-            </Link>
-            <nav className="site-nav-links">
-              <Link href="/">Hjem</Link>
-              <Link href="/#tjenester">Tjenester</Link>
-              <Link href="/who-are-we">Om oss</Link>
-              <Link href="/ansatte">Ansatte</Link>
-              <Link href="/#kontakt">Kontakt</Link>
-            </nav>
-          </div>
-          <div className="mt-16 mb-8 sm:mt-20 sm:mb-10">
-            <p className="service-kicker mb-3">Est. 2007</p>
-            <h1 className="text-heading max-w-2xl text-4xl font-bold tracking-tight sm:text-5xl">
-              Hvem er vi?
-            </h1>
-            <p className="text-muted mt-5 max-w-xl text-lg leading-relaxed">
-              Johan Skeie er et lokalt entreprenørfirma i Kvam som leverer
-              graving, grusing, transport og praktiske tjenester for
-              uteområder.
-            </p>
-          </div>
+    <main>
+      {/* ── Page header ──────────────────────────── */}
+      <header className='inner-page-header'>
+        <div className='page-container'>
+          <p className='section-eyebrow' style={{ marginBottom: '1rem' }}>
+            Est. 2007 · Kvam kommune
+          </p>
+          <h1 className='inner-page-h1'>Historien vår</h1>
+          <p className='inner-page-lead'>
+            Johan Skeie er et lokalt entreprenørfirma bygd på lokal kunnskap,
+            ærlig håndverk og lang erfaring i krevende vestlandsterreng.
+          </p>
         </div>
       </header>
 
-      <section className="mx-auto mt-14 grid w-full max-w-6xl gap-8 px-6 sm:px-10 md:grid-cols-2">
-        <article className="service-item">
-          <p className="service-kicker">Historie</p>
-          <h2>Fra oppstart til etablert aktør</h2>
-          <p>
-            Selskapet ble etablert i 2007 av Johan Skeie. Siden oppstarten har
-            vi bistått hytteeiere, privatkunder og lokale entreprenører med
-            pålitelig gjennomføring og tydelig kommunikasjon.
-          </p>
-        </article>
+      {/* ── Timeline ─────────────────────────────── */}
+      <section className='page-section'>
+        <div className='page-container' style={{ maxWidth: '52rem' }}>
+          <div className='timeline'>
 
-        <article className="service-item">
-          <p className="service-kicker">Status i dag</p>
-          <h2>Moderne drift og fleksibel kapasitet</h2>
-          <p>
-            I dag leverer vi tjenester med moderne utstyr, bred erfaring og
-            fokus på kvalitet. Vi tar oppdrag i ulike størrelser og tilpasser
-            leveransen etter prosjektets behov.
-          </p>
-        </article>
-      </section>
+            <div className='timeline-item'>
+              <p className='timeline-year'>2007</p>
+              <div className='timeline-content'>
+                <h2>Oppstarten</h2>
+                <p>
+                  Johan Skeie startet selskapet i 2007 med én gravemaskin og
+                  et klart mål: å levere solid grunnarbeid til folk i Kvam på
+                  en ærlig og forutsigbar måte. Kvam er et krevende terreng –
+                  bratt, variert og til tider uforutsigbart – og det krever
+                  lokal kunnskap som bare kommer med år i felten.
+                </p>
+                <p>
+                  De første oppdragene kom fra naboer og bekjente. Hytteeiere
+                  trengte hjelp med drenering og atkomstveger. Bønder hadde
+                  behov for planeringsarbeid. Sakte men sikkert bygde Johan
+                  seg et rykte for å møte opp, gjøre jobben riktig og rydde
+                  etter seg.
+                </p>
+              </div>
+            </div>
 
-      <section className="mx-auto mt-14 mb-20 w-full max-w-6xl border-t px-6 pt-12 sm:px-10">
-        <p className="service-kicker mb-3">Adresse og kontakt</p>
-        <h2 className="mb-5">Kontaktinformasjon</h2>
-        <div className="grid gap-6 sm:grid-cols-3">
-          <div>
-            <p className="text-muted text-sm font-semibold uppercase tracking-widest mb-1">Adresse</p>
-            <p>Kvam kommune, Vestland</p>
-          </div>
-          <div>
-            <p className="text-muted text-sm font-semibold uppercase tracking-widest mb-1">Telefon</p>
-            <a href="tel:+4791545745">915 45 745</a>
-          </div>
-          <div>
-            <p className="text-muted text-sm font-semibold uppercase tracking-widest mb-1">E-post</p>
-            <a href="mailto:johan@johanskeie.no">johan@johanskeie.no</a>
+            <div className='timeline-item'>
+              <p className='timeline-year'>2010–2018</p>
+              <div className='timeline-content'>
+                <h2>Vekst og bredere kapasitet</h2>
+                <p>
+                  Gjennom 2010-tallet vokste oppdragsmengden jevnt og trutt.
+                  Maskinparken ble utvidet og tjenestespekteret bredere.
+                  Transport ble en naturlig del av tilbudet – det var stor
+                  etterspørsel etter pålitelig levering av masser og
+                  materialer, særlig til byggeplasser og hyttefelt som lå
+                  vanskelig til.
+                </p>
+                <p>
+                  Samarbeidet med lokale entreprenører og håndverkere ble
+                  tettere. Johan Skeie ble en del av det lokale fagmiljøet –
+                  en aktør man ringte når prosjektet krevde noen som visste
+                  hva de holdt på med, og som møtte opp uten å trenge
+                  påminnelse.
+                </p>
+              </div>
+            </div>
+
+            <div className='timeline-item'>
+              <p className='timeline-year'>2019–2022</p>
+              <div className='timeline-content'>
+                <h2>Investering i utstyr og kompetanse</h2>
+                <p>
+                  Kravene fra markedet ble mer krevende. Prosjektene ble
+                  større, og kundene forventet presisjon og profesjonell
+                  gjennomføring. Vi investerte i nyere maskiner, forbedret
+                  logistikken og styrket teamet med folk som delte samme
+                  holdning til arbeidet.
+                </p>
+                <p>
+                  I denne perioden tok vi på oss flere større
+                  tomteklargjøringsprosjekter og utvidet til regionale
+                  oppdrag. Ryktet for nøyaktighet og ryddig kommunikasjon
+                  fulgte oss, og det kom stadig flere forespørsler fra kunder
+                  utenfor nærområdet.
+                </p>
+              </div>
+            </div>
+
+            <div className='timeline-item'>
+              <p className='timeline-year'>I dag</p>
+              <div className='timeline-content'>
+                <h2>Solid drift med lokale røtter</h2>
+                <p>
+                  I dag er Johan Skeie AS et veletablert selskap med moderne
+                  maskinpark, erfarne folk og god kapasitet. Vi tar oppdrag av
+                  alle størrelser – fra enkle massekjøringer til større
+                  grunnarbeidsprosjekter som krever planlegging og
+                  koordinering.
+                </p>
+                <p>
+                  Det som ikke har endret seg er holdningen: vi er grundige,
+                  vi kommuniserer tydelig, og vi leverer det vi lover. Kvam er
+                  hjemstedet vårt, og det merkes i hvordan vi jobber – i
+                  terrenget vi kjenner, i naboene vi hjelper og i prosjektene
+                  vi er stolte av å ha levert.
+                </p>
+              </div>
+            </div>
+
           </div>
         </div>
       </section>
 
-      <footer className="w-full border-t px-6 py-8 sm:px-10">
-        <div className="mx-auto grid w-full max-w-6xl gap-4 md:grid-cols-2">
-          <div className="text-muted text-sm">
-            <p className="font-semibold">Johan Skeie</p>
-            <p>Kvam kommune, Vestland</p>
-            <p>
-              T: <a href="tel:+4791545745">915 45 745</a>
-            </p>
-            <p>
-              E-post: <a href="mailto:johan@johanskeie.no">johan@johanskeie.no</a>
+      {/* ── Contact info ─────────────────────────── */}
+      <section
+        className='page-section'
+        style={{ borderTop: '1px solid var(--border)', paddingTop: '3.5rem', paddingBottom: '4rem' }}
+      >
+        <div className='page-container'>
+          <p className='section-eyebrow'>Ta kontakt</p>
+          <h2 className='section-heading'>Kontaktinformasjon</h2>
+          <div className='contact-detail-grid'>
+            <div>
+              <p className='contact-detail-label'>Adresse</p>
+              <p className='contact-detail-value'>Kvam kommune, Vestland</p>
+            </div>
+            <div>
+              <p className='contact-detail-label'>Telefon</p>
+              <p className='contact-detail-value'>
+                <a href='tel:+4791545745'>915 45 745</a>
+              </p>
+            </div>
+            <div>
+              <p className='contact-detail-label'>E-post</p>
+              <p className='contact-detail-value'>
+                <a href='mailto:johan@johanskeie.no'>johan@johanskeie.no</a>
+              </p>
+            </div>
+          </div>
+          <div style={{ marginTop: '2.5rem', display: 'flex', gap: '0.85rem', flexWrap: 'wrap' }}>
+            <a className='button-primary' href='tel:+4791545745'>Ring oss</a>
+            <a className='button-secondary' href='/#kontakt'>Send melding</a>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Footer ───────────────────────────────── */}
+      <footer className='site-footer'>
+        <div className='page-container'>
+          <div className='footer-inner'>
+            <div>
+              <p className='footer-name'>Johan Skeie</p>
+              <p className='footer-detail'>
+                Kvam kommune, Vestland<br />
+                T: <a href='tel:+4791545745'>915 45 745</a><br />
+                E: <a href='mailto:johan@johanskeie.no'>johan@johanskeie.no</a>
+              </p>
+            </div>
+            <p className='footer-credit'>
+              Utviklet av{' '}
+              <a
+                href='https://digvalley.com'
+                target='_blank'
+                rel='noopener noreferrer'
+              >
+                Digvalley AS
+              </a>
             </p>
           </div>
-          <p className="text-muted text-sm md:text-right">
-            Utviklet av{" "}
-            <a href="https://digvalley.com" target="_blank" rel="noopener noreferrer">
-              Digvalley AS
-            </a>
-          </p>
         </div>
       </footer>
     </main>
-  );
+  )
 }
