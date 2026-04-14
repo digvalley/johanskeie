@@ -666,6 +666,10 @@ a {
   .form-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .form-field-full {
+    grid-column: 1 / -1;
+  }
 }
 
 .form-field {

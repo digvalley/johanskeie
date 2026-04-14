@@ -128,7 +128,9 @@ export default function Home() {
                 <p>{s.desc}</p>
                 <div className='service-tags'>
                   {s.tags.map((t) => (
-                    <span key={t} className='service-tag'>{t}</span>
+                    <span key={t} className='service-tag'>
+                      {t}
+                    </span>
                   ))}
                 </div>
               </article>
@@ -149,16 +151,11 @@ export default function Home() {
             </p>
           </div>
           <form action={sendContact} className='contact-form'>
+            <label className='form-field form-field-full mb-4'>
+              <span>Navn</span>
+              <input name='name' type='text' required placeholder='Ditt navn' />
+            </label>
             <div className='form-grid'>
-              <label className='form-field'>
-                <span>Navn</span>
-                <input
-                  name='name'
-                  type='text'
-                  required
-                  placeholder='Ditt navn'
-                />
-              </label>
               <label className='form-field'>
                 <span>E-post</span>
                 <input
