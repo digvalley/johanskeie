@@ -18,9 +18,7 @@ const ctaClass =
 
 export default function SiteNav() {
   return (
-    <nav
-      className='site-nav sticky top-0 z-50 border-b border-[color:color-mix(in_srgb,var(--border)_55%,transparent)] bg-[color:color-mix(in_srgb,var(--background)_78%,transparent)] backdrop-blur-md supports-[backdrop-filter]:bg-[color:color-mix(in_srgb,var(--background)_65%,transparent)]'
-    >
+    <nav className='site-nav sticky top-0 z-50 border-b border-[color:color-mix(in_srgb,var(--border)_55%,transparent)] bg-[color:color-mix(in_srgb,var(--background)_78%,transparent)] backdrop-blur-md supports-[backdrop-filter]:bg-[color:color-mix(in_srgb,var(--background)_65%,transparent)]'>
       <div className='mx-auto flex h-[5.5rem] w-full max-w-6xl items-center justify-between gap-6 px-6 sm:px-10'>
         <Link
           href='/'
@@ -30,8 +28,8 @@ export default function SiteNav() {
           <Image
             src='/logo.png'
             alt='Johan Skeie logo'
-            width={130}
-            height={130}
+            width={150}
+            height={150}
             priority
           />
         </Link>
